@@ -14,7 +14,7 @@ export const Header = (props) => {
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
                 <a
-                  href="#features"
+                  href="/Features"
                   className="btn"
                 >
                   Look for an ideal place to stay
