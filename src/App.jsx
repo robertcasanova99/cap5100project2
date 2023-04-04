@@ -20,10 +20,10 @@ const App = () => {
   return (
     <div>
       <Routes>
-      <Route exact path="" element={<Header/>}/>
-      <Route exact path="/" element={<Header/>}/>
-      <Route exact path="/Header" element={<Header/>}/>
-      <Route exact path="/header" element={<Header/>}/>
+      <Route exact path="" element={<Header data={landingPageData.Header}/>}/>
+      <Route exact path="/" element={<Header data={landingPageData.Header}/>}/>
+      <Route exact path="/Header" element={<Header data={landingPageData.Header}/>}/>
+      <Route exact path="/header" element={<Header data={landingPageData.Header}/>}/>
       <Route exact path="/Features" element={<Features/>}/>
       </Routes>
     </div>
