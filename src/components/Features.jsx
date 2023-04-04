@@ -15,6 +15,18 @@ export const Features = (props) => {
     const [inputText, setInputText] = useState("");
     const [dialogOpen, setDialogOpen] = useState(false);
 
+    // Amenity state holders
+    const [amenityOneChecked, setAmenityOneChecked] = useState(false);
+    const [amenityTwoChecked, setAmenityTwoChecked] = useState(false);
+    const [amenityThreeChecked, setAmenityThreeChecked] = useState(false);
+    const [amenityFourChecked, setAmenityFourChecked] = useState(false);
+    const [amenityFiveChecked, setAmenityFiveChecked] = useState(false);
+    const [amenitySixChecked, setAmenitySixChecked] = useState(false);
+    const [amenitySevenChecked, setAmenitySevenChecked] = useState(false);
+    const [amenityEightChecked, setAmenityEightChecked] = useState(false);
+    const [amenityNineChecked, setAmenityNineChecked] = useState(false);
+    const [amenityTenChecked, setAmenityTenChecked] = useState(false);
+    
     let inputHandler = (e) => {
       //convert input text to lower case
       var lowerCase = e.target.value.toLowerCase();
@@ -45,7 +57,10 @@ export const Features = (props) => {
             style={{height:'250px', width: '320px'}}> 
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityOneChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 1
@@ -54,7 +69,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityTwoChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 2
@@ -63,7 +81,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityThreeChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 3
@@ -72,7 +93,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityFourChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 4
@@ -81,7 +105,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityFiveChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 5
@@ -90,7 +117,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenitySixChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 6
@@ -99,7 +129,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenitySevenChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 7
@@ -108,7 +141,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityEightChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 8
@@ -117,7 +153,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityNineChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 9
@@ -126,7 +165,10 @@ export const Features = (props) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <FormControlLabel control={<Checkbox/>}
+                    <FormControlLabel control={
+                        <Checkbox onChange={(event) =>
+                            setAmenityTenChecked(event.target.checked)
+                        }/>}
                         label={
                             <Box component="div" fontSize={20}>
                             Amenity 10
