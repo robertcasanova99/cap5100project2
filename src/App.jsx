@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Header } from "./components/header";
 import JsonData from "./data/data.json";
-import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import { Route, Routes  } from 'react-router-dom';
 import {Features} from "./components/Features";
 
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-});
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
