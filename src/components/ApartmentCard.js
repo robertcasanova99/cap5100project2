@@ -7,6 +7,7 @@ import Dialog from '@mui/material/Dialog';
 import GoogleMapReact from 'google-map-react';
 import SchoolIcon from '@mui/icons-material/School';
 import ApartmentIcon from '@mui/icons-material/Apartment';
+import amenityNames from "./Amenities"
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -100,12 +101,12 @@ function ApartmentCard(props) {
                             alignItems: 'center',
                             flexWrap: 'wrap'
                         }}>
-                            {amenities.map((amenityNumber) => <Item2>Amenity {amenityNumber}</Item2>)}
+                            {amenities.map((amenityNumber) => <Item2>{amenityNames[amenityNumber]}</Item2>)}
                         </Box>
                         <Box sx={{
                             alignSelf:'auto',
-                            width:240,
-                            height:160,
+                            width:220,
+                            height:140,
                             mb:-20
                         }}>
                             <GoogleMapReact

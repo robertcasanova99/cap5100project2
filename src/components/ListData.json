@@ -37,7 +37,7 @@
     "city": "San Fransico, WA",
     "price": 7250,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
-    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "amenities": [2, 3, 4, 5, 6, 7, 8, 9, 10],
     "phoneNumber": 13528882734,
     "coordinates": {
         "latitude": 29.6238,
@@ -52,7 +52,7 @@
     "city": "Gainesville, FL",
     "price": 480,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
-    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "amenities": [2, 3, 4, 5, 6, 7, 8, 9, 10],
     "phoneNumber": 13528882734,
     "coordinates": {
         "latitude": 29.6136,
@@ -67,7 +67,7 @@
     "city": "Sanford, FL",
     "price": 0,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
-    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "amenities": [2, 3, 4, 5, 6, 7, 8, 9, 10],
     "phoneNumber": 13528882734,
     "coordinates": {
         "latitude": 29.6836,
@@ -82,7 +82,7 @@
     "city": "Gainesville, FL",
     "price": 9600,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
-    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "amenities": [2, 3, 4, 5, 6, 7, 8, 9, 10],
     "phoneNumber": 13528882734,
     "coordinates": {
         "latitude": 29.6436,
@@ -97,7 +97,7 @@
     "city": "Schwangau, BA",
     "price": 1399,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
-    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "amenities": [2, 3, 4, 5, 6, 7, 8, 9, 10],
     "phoneNumber": 13528882734,
     "coordinates": {
         "latitude": 29.6436,

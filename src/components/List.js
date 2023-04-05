@@ -15,8 +15,6 @@ function List(props) {
         return hasAmenities && withinBudget && withinRoommates
     })
 
-    console.log(filteredData)
-
     const apartmentCards = filteredData.map((apartmentData) => 
         <ApartmentCard
             image={apartmentData.image}
