@@ -115,19 +115,17 @@ export const Features = (props) => {
 
             try {
                 let result = (promise.data.choices[0].message.content)
-                console.log(result)
                 if (result === "[]") {
                     setHideResults(true)
                     return
                 }
-
                 let parsedResult = result.substring(1, result.length - 1).split(",").map(function(str) {
                     return parseInt(str);
                 })
                 
                 for (let i = 0; i < parsedResult.length; i++) {
                     amenityArray[parsedResult[i]] = true
-                    switch (i) {
+                    switch (parsedResult[i]) {
                         case 1:
                             setAmenityOneChecked(true)
                             break
