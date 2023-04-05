@@ -221,7 +221,7 @@ export const Features = (props) => {
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent='stretch'>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityOneChecked} onChange={(event) =>
                                 setAmenityOneChecked(event.target.checked)
                             }/>}
                             label={
@@ -233,7 +233,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityTwoChecked} onChange={(event) =>
                                 setAmenityTwoChecked(event.target.checked)
                             }/>}
                             label={
@@ -245,7 +245,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityThreeChecked} onChange={(event) =>
                                 setAmenityThreeChecked(event.target.checked)
                             }/>}
                             label={
@@ -257,7 +257,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityFourChecked} onChange={(event) =>
                                 setAmenityFourChecked(event.target.checked)
                             }/>}
                             label={
@@ -269,7 +269,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityFiveChecked} onChange={(event) =>
                                 setAmenityFiveChecked(event.target.checked)
                             }/>}
                             label={
@@ -281,7 +281,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenitySixChecked} onChange={(event) =>
                                 setAmenitySixChecked(event.target.checked)
                             }/>}
                             label={
@@ -293,7 +293,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenitySevenChecked} onChange={(event) =>
                                 setAmenitySevenChecked(event.target.checked)
                             }/>}
                             label={
@@ -305,7 +305,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityEightChecked} onChange={(event) =>
                                 setAmenityEightChecked(event.target.checked)
                             }/>}
                             label={
@@ -317,7 +317,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityNineChecked} onChange={(event) =>
                                 setAmenityNineChecked(event.target.checked)
                             }/>}
                             label={
@@ -329,7 +329,7 @@ export const Features = (props) => {
                     </Grid>
                     <Grid item xs={6}>
                         <FormControlLabel control={
-                            <Checkbox onChange={(event) =>
+                            <Checkbox checked={amenityTenChecked} onChange={(event) =>
                                 setAmenityTenChecked(event.target.checked)
                             }/>}
                             label={
