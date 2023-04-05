@@ -81,11 +81,12 @@ export const Features = (props) => {
                 },
                 {
                     headers: {
-                    "Content-Type": "application/json",
-                    'Authorization': `Bearer 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`,
+                        "Content-Type": "application/json",
+                        'Authorization': `Bearer ${process.env.REACT_APP_CHATGPT_KEY}`,
                     },
                 }
             );
+            console.log(response)
             return response;
         } catch(err){
             setIsLoading(false)

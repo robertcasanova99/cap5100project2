@@ -110,7 +110,7 @@ function ApartmentCard(props) {
                             mb:-20
                         }}>
                             <GoogleMapReact
-                                bootstrapURLKeys={{ key: "" }}
+                                bootstrapURLKeys={{ key: process.env.REACT_APP_GMAPS_KEY }}
                                 defaultCenter={defaultProps.center}
                                 defaultZoom={defaultProps.zoom}
                             >
