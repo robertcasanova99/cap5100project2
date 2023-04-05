@@ -13,6 +13,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { DialogContent, Grid } from '@mui/material';
+import axios from "axios";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -60,10 +61,40 @@ export const Features = (props) => {
         []
     )
 
+
+    const fetchData = async (input) => {
+        let amenitiesString="1. Car wash\n2. Gym\n3. On-site security\n4. Barricaded Windows\n5. Room Service\n6. In-unit laundry\n"
+        try{
+        const response = await axios.post(
+          "https://api.openai.com/v1/chat/completions",
+          {
+            messages: [{role: 'user', content:`A client who is looking for an apartment says they are looking for the following: "${input}".  From our following numbered amenities: \n"${amenitiesString}"Can you return an array of each amenity's number which matches the amenity the client would most likely desire given their description and say nothing else?`}],
+            model: "gpt-3.5-turbo",
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              'Authorization': `Bearer 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`,
+            },
+          }
+        );
+      
+        return response;}
+        catch(err){
+            console.log(err);
+        }
+      };
+
+
     let inputHandler = (e) => {
       //convert input text to lower case
       var lowerCase = e.target.value.toLowerCase();
       setInputText(lowerCase);
+    };
+
+    let textInput = (e) => {
+        if(e.key==="Enter")
+            console.log(fetchData(inputText).then(res=>console.log(res.data.choices[0].message.content)));
     };
 
     let onFilterClickHandler = (e) => {
@@ -249,6 +280,7 @@ export const Features = (props) => {
             <TextField
                 id="outlined-basic"
                 onChange={inputHandler}
+                onKeyDown={textInput}
                 variant="outlined"
                 label="Describe your ideal apartment with words!"
                 fullWidth
