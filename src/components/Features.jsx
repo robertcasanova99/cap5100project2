@@ -40,8 +40,8 @@ export const Features = (props) => {
     const [amenityEightChecked, setAmenityEightChecked] = useState(false);
     const [amenityNineChecked, setAmenityNineChecked] = useState(false);
     const [amenityTenChecked, setAmenityTenChecked] = useState(false);
-    const [priceSliderValue, setPriceSliderValue] = useState(((minCost + maxCost)/2) || 0);
-    const [roommateSliderValue, setRoommateSliderValue] = useState(0);
+    const [priceSliderValue, setPriceSliderValue] = useState(maxCost || 0);
+    const [roommateSliderValue, setRoommateSliderValue] = useState(4);
     
     const amenityArray = [
         false,

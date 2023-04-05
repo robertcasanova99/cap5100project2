@@ -27,6 +27,8 @@ function List(props) {
             price={apartmentData.price}
             description={apartmentData.description}
             amenities={apartmentData.amenities}
+            phoneNumber={apartmentData.phoneNumber}
+            coordinates={apartmentData.coordinates}
         />
     );
     return (
