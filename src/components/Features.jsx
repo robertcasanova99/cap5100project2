@@ -43,6 +43,23 @@ export const Features = (props) => {
     const [priceSliderValue, setPriceSliderValue] = useState(((minCost + maxCost)/2) || 0);
     const [roommateSliderValue, setRoommateSliderValue] = useState(0);
     
+    const amenityArray = [
+        false,
+        amenityOneChecked,
+        amenityTwoChecked,
+        amenityThreeChecked,
+        amenityFourChecked,
+        amenityFiveChecked,
+        amenitySixChecked,
+        amenitySevenChecked,
+        amenityEightChecked,
+        amenityNineChecked,
+        amenityTenChecked
+    ].reduce(
+        (out, bool, index) => bool ? out.concat(index) : out, 
+        []
+    )
+
     let inputHandler = (e) => {
       //convert input text to lower case
       var lowerCase = e.target.value.toLowerCase();
@@ -248,7 +265,11 @@ export const Features = (props) => {
             </IconButton>
         </div>
 
-        <List input={inputText} />
+        <List 
+            requiredAmenities={amenityArray}
+            maxBudget={priceSliderValue}
+            maxNumberOfRoommates={roommateSliderValue}
+        />
       </div>
     );
 };

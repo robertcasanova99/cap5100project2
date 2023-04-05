@@ -4,18 +4,20 @@ import Box from '@mui/material/Box';
 import ApartmentCard from "./ApartmentCard"
 
 function List(props) {
-    //create a new array by filtering the original array
-    // const filteredData = data.filter((el) => {
-    //     //if no input the return the original
-    //     if (props.input === '') {
-    //         return el;
-    //     }
-    //     //return the item which contains the user input
-    //     else {
-    //         return el.text.toLowerCase().includes(props.input)
-    //     }
-    // })
-    const apartmentCards = data.map((apartmentData) => 
+    const requiredAmenities = props.requiredAmenities
+    const maxBudget = props.maxBudget
+    const maxNumberOfRoommates = props.maxNumberOfRoommates
+
+    const filteredData = data.filter((el) => {
+        const hasAmenities = requiredAmenities.every(val => el.amenities.includes(val))
+        const withinBudget = el.price <= maxBudget
+        const withinRoommates = (el.config.charCodeAt(0) - 48) - 1 <= maxNumberOfRoommates
+        return hasAmenities && withinBudget && withinRoommates
+    })
+
+    console.log(filteredData)
+
+    const apartmentCards = filteredData.map((apartmentData) => 
         <ApartmentCard
             image={apartmentData.image}
             name={apartmentData.name}
