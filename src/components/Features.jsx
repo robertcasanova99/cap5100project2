@@ -115,6 +115,7 @@ export const Features = (props) => {
 
             try {
                 let result = (promise.data.choices[0].message.content)
+                console.log(result)
                 if (result === "[]") {
                     setHideResults(true)
                     return
