@@ -200,7 +200,7 @@ export const Features = (props) => {
         setAmenitySevenChecked(false)
         setAmenityEightChecked(false)
         setAmenityNineChecked(false)
-        setAmenityNineChecked(false)
+        setAmenityTenChecked(false)
         setHideResults(false)
     }
 

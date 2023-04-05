@@ -79,9 +79,10 @@ function ApartmentCard(props) {
                     <Box sx={{
                         width:300,
                         height:300,
-                        display: 'flex',
+                        display: 'inline-flex',
                         flexDirection: 'column',
-                        alignItems: 'center'
+                        alignItems: 'center',
+                        justifyContent: 'space-between'
                     }}>
                         <Item sx={{p: 1, mt: 1, ml: 4, mr: 4, mb: 1}}>{description}</Item>
                         <Box sx={{
@@ -107,7 +108,7 @@ function ApartmentCard(props) {
                             alignSelf:'auto',
                             width:220,
                             height:140,
-                            mb:-20
+                            mb:-5
                         }}>
                             <GoogleMapReact
                                 bootstrapURLKeys={{ key: process.env.REACT_APP_GMAPS_KEY }}
