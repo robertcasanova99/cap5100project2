@@ -7,12 +7,13 @@ function List(props) {
     const requiredAmenities = props.requiredAmenities
     const maxBudget = props.maxBudget
     const maxNumberOfRoommates = props.maxNumberOfRoommates
+    const hideResults = props.hideResults
 
     const filteredData = data.filter((el) => {
         const hasAmenities = requiredAmenities.every(val => el.amenities.includes(val))
         const withinBudget = el.price <= maxBudget
         const withinRoommates = (el.config.charCodeAt(0) - 48) - 1 <= maxNumberOfRoommates
-        return hasAmenities && withinBudget && withinRoommates
+        return !hideResults && hasAmenities && withinBudget && withinRoommates
     })
 
     const apartmentCards = filteredData.map((apartmentData) => 

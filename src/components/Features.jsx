@@ -15,6 +15,8 @@ import Slider from '@mui/material/Slider';
 import { DialogContent, Grid } from '@mui/material';
 import axios from "axios";
 import amenityNames from "./Amenities"
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -28,7 +30,7 @@ export const Features = (props) => {
     const minCost = data.map(function(el){return el.price}).reduce(function(prevEl, el){return Math.min(prevEl, el)});
     const maxCost = data.map(function(el){return el.price}).reduce(function(prevEl, el){return Math.max(prevEl, el)});
 
-    const [inputText] = useState("");
+    const [inputText, setInputText] = useState("");
     const [dialogOpen, setDialogOpen] = useState(false);
 
     // Amenity state holders
@@ -44,6 +46,9 @@ export const Features = (props) => {
     const [amenityTenChecked, setAmenityTenChecked] = useState(false);
     const [priceSliderValue, setPriceSliderValue] = useState(maxCost || 0);
     const [roommateSliderValue, setRoommateSliderValue] = useState(4);
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [hideResults, setHideResults] = useState(false);
     
     const amenityArray = [
         false,
@@ -67,12 +72,11 @@ export const Features = (props) => {
         for (let i = 1; i < amenityNames.length; i++) {
             parsedAmenities += i + ". " + amenityNames[i] + "\n"
         }
-        console.log(parsedAmenities)
         try{
             const response = await axios.post(
                 "https://api.openai.com/v1/chat/completions",
                 {
-                    messages: [{role: 'user', content:`A client who is looking for an apartment says they are looking for the following: "${input}".  From our following numbered amenities: \n"${parsedAmenities}"Can you return an array of each amenity's number which matches the amenity the client would most likely desire given their description and say nothing else?`}],
+                    messages: [{role: 'user', content:`A client who is looking for an apartment says they are looking for the following: "${input}".  From our following numbered amenities: \n"${parsedAmenities}"Can you return an array of each amenity's number which matches the amenity the client would most likely desire given their description. Say nothing else but the array, even if it is empty- still say nothing and return an empty array. Don't even say the word's "empty array"`}],
                     model: "gpt-3.5-turbo",
                 },
                 {
@@ -84,26 +88,42 @@ export const Features = (props) => {
             );
             return response;
         } catch(err){
+            setIsLoading(false)
             console.log(err);
         }
       };
 
 
     let inputHandler = (e) => {
-      if (e.target.value.length === 0) {
-        resetChecks()
-      }
+        let text = e.target.value
+        setInputText(text)
+        if (text.length === 0) {
+            resetChecks()
+        }
     };
 
     let textInput = async (e) => {
         if(e.key === "Enter") {
+            if (e.target.value.length === 0) {
+                return;
+            }
+
+            setIsLoading(true)
             let promise = await fetchData(inputText)
-            let result = (promise.data.choices[0].message.content)
+            setIsLoading(false)
+            resetChecks()
+
             try {
+                let result = (promise.data.choices[0].message.content)
+                if (result === "[]") {
+                    setHideResults(true)
+                    return
+                }
+
                 let parsedResult = result.substring(1, result.length - 1).split(",").map(function(str) {
                     return parseInt(str);
                 })
-                resetChecks()
+                
                 for (let i = 0; i < parsedResult.length; i++) {
                     amenityArray[parsedResult[i]] = true
                     switch (i) {
@@ -181,10 +201,17 @@ export const Features = (props) => {
         setAmenityEightChecked(false)
         setAmenityNineChecked(false)
         setAmenityNineChecked(false)
+        setHideResults(false)
     }
 
     return (
       <div className="main">
+        <Backdrop
+            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+            open={isLoading}
+        >
+            <CircularProgress color="inherit" />
+        </Backdrop>
         <Dialog
             modal="false"
             open={dialogOpen}
@@ -363,6 +390,7 @@ export const Features = (props) => {
             requiredAmenities={amenityArray}
             maxBudget={priceSliderValue}
             maxNumberOfRoommates={roommateSliderValue}
+            hideResults={hideResults}
         />
       </div>
     );
