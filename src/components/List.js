@@ -23,6 +23,8 @@ function List(props) {
             sqft={apartmentData.sqft}
             city={apartmentData.city}
             price={apartmentData.price}
+            description={apartmentData.description}
+            amenities={apartmentData.amenities}
         />
     );
     return (

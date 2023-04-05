@@ -5,7 +5,9 @@
     "config": "3 bed 2 bath",
     "sqft": 1236,
     "city": "Boston, MA",
-    "price": 1399
+    "price": 1399,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }, {
     "id": 2,
     "image": "/img/apartmentimage2.jpg",
@@ -13,7 +15,9 @@
     "config": "0 bed 1 bath",
     "sqft": 4,
     "city": "Seattle, WA",
-    "price": 6999
+    "price": 6999,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }, {
     "id": 3,
     "image": "/img/apartmentimage3.jpg",
@@ -21,7 +25,9 @@
     "config": "4 bed 2.5 bath",
     "sqft": 2155,
     "city": "San Fransico, WA",
-    "price": 7250
+    "price": 7250,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }, {
     "id": 4,
     "image": "/img/apartmentimage4.jpg",
@@ -29,7 +35,9 @@
     "config": "4 bed 4 bath",
     "sqft": 553,
     "city": "Gainesville, FL",
-    "price": 480
+    "price": 480,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }, {
     "id": 5,
     "image": "/img/apartmentimage5.jpg",
@@ -37,7 +45,9 @@
     "config": "0 bed 0 bath",
     "sqft": 99999,
     "city": "Sanford, FL",
-    "price": 0
+    "price": 0,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }, {
     "id": 6,
     "image": "/img/apartmentimage6.jpg",
@@ -45,7 +55,9 @@
     "config": "0 bed 16 bath",
     "sqft": 22550,
     "city": "Gainesville, FL",
-    "price": 9600
+    "price": 9600,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }, {
     "id": 7,
     "image": "/img/apartmentimage7.jpg",
@@ -53,5 +65,7 @@
     "config": "36 bed 22 bath",
     "sqft": 64887,
     "city": "Schwangau, BA",
-    "price": 1399
+    "price": 1399,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "amenities": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }] 
