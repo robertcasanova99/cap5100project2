@@ -83,7 +83,7 @@ function ApartmentCard(props) {
                             alignItems: 'center',
                             flexWrap: 'wrap'
                         }}>
-                            {amenities.map((amenityNumber) => <Item>Amenity no. {amenityNumber}</Item>)}
+                            {amenities.map((amenityNumber) => <Item>Amenity {amenityNumber}</Item>)}
                         </Box>
                     </Box>
                 </Box>
